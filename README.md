@@ -60,3 +60,35 @@ Administrative tasks, such as database migrations, can be performed using Spring
 
 ## **Summary**
 The Games Management Application is a robust solution for managing games, offering features to list, add, and delete game records. The frontend, built with React.js, provides an intuitive interface, while the backend, powered by Java Spring Boot, ensures reliable and scalable API services. By leveraging Docker and Docker Compose, the application ensures environment consistency and simplifies deployment. Following the 12-Factor App methodology, this project embodies modern software development practices, making it scalable, maintainable, and efficient for educational use.
+
+##  Steps to set up the project 
+
+Docker should be installed on your machine.
+
+Clone or download the docker-compose.yml file present in the repository.
+
+You could see 3 services "db","app" and "frontend" you will have to make some configurations to run it please refer below steps.
+
+In "db" inside environment add password for mysql and name of the database MYSQL_ROOT_PASSWORD: root MYSQL_DATABASE: gamedb
+
+In "app" inside environment you will need to add the URL, Username, Password and Server port to start the backend service. - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/gamedb 
+- SPRING_DATASOURCE_USERNAME=root 
+- SPRING_DATASOURCE_PASSWORD=root 
+- SERVER_PORT=8087
+
+After this inside "ports" you need to map the ports for the application "8087:8087"
+
+Note - Please note that what ever SERVER_PORT you have chosen that should match with the "ports". Application will not run if there are misconfiguration.
+
+In "frontend" inside build->args section you will need to pass the endpoint where your backend is running in this case it on "http://localhost:8087" REACT_APP_HOST_IP_ADDRESS=http://localhost:8087
+
+Note - Make sure the port in endpoint is same as mentioned in step 5.
+
+Cross verify if you done everything correctly
+
+Open cmd in the directory where the docker-compose.yml file is present and make sure your docker deamon is running and enter the command mentioned below. docker compose up --build -d
+
+Once docker pulls all the images you can access your application on "http://localhost:3000"
+
+
+
