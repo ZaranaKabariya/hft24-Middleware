@@ -25,9 +25,10 @@ Database: MySQL
 Containerization: Docker, Docker Compose
 
 Documentation: 12-Factor Principles
-🔒 Codebase
-The project uses a single codebase stored in a version control system (GitHub Codespaces). Both the frontend and backend components are maintained in the same repository, enabling streamlined version control, better traceability, and simplified management.
-⚙️ Dependencies
+ 🔒 Codebase
+    The project uses a single codebase stored in a version control system (GitHub Codespaces). Both the frontend and backend components are maintained in the same 
+    repository, enabling streamlined version control, better traceability, and simplified management.
+ ⚙️ Dependencies
 Frontend: package.json for React.js dependencies
 Backend: pom.xml for Spring Boot dependencies
 🔑 Config
