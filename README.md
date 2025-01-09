@@ -58,5 +58,5 @@ Logs are treated as event streams and can be accessed using docker-compose logs.
 ## ⚙️ Admin Processes
 Administrative tasks, such as database migrations, can be performed using Spring Boot Actuator or by executing manual commands within the containers.
 
-**Summary**
+## **Summary**
 The Games Management Application is a robust solution for managing games, offering features to list, add, and delete game records. The frontend, built with React.js, provides an intuitive interface, while the backend, powered by Java Spring Boot, ensures reliable and scalable API services. By leveraging Docker and Docker Compose, the application ensures environment consistency and simplifies deployment. Following the 12-Factor App methodology, this project embodies modern software development practices, making it scalable, maintainable, and efficient for educational use.
