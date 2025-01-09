@@ -90,5 +90,6 @@ Open cmd in the directory where the docker-compose.yml file is present and make 
 
 Once docker pulls all the images you can access your application on "http://localhost:3000"
 
+NOTE - To check swagger just add swagger-ui.html at the end of backend host, for example http://localhost:8087/swagger-ui.html
 
 
